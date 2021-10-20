@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class CustomTableView: BaseView {
+class CustomTableView: GenericBaseView<CustomTableViewData> {
     
     deinit {
         print("DEINIT: CustomTableView")
@@ -32,7 +32,7 @@ class CustomTableView: BaseView {
     override func addMajorViewComponents() {
         super.addMajorViewComponents()
         addTableView()
-        addHeaderView()
+        /// addHeaderView()
     }
     
     private func addTableView() {
@@ -47,8 +47,16 @@ class CustomTableView: BaseView {
     }
     
     private func addHeaderView() {
-        headerView = HeaderView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 250)) // giving as input
-        tableView.tableHeaderView = headerView // according to instead of headerView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.tableHeaderView = headerView /// according to instead of headerView.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    private func initiateHeaderView() {
+        guard let data = returnData() else { return } /// if there is no data, it doesnt run the above code snippet
+        
+        // headerView = HeaderView() giving as input
+        headerView = HeaderView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 250),
+                                data: data.headerViewData)
+        addHeaderView()
     }
     
     func reloadTableView() {
@@ -56,6 +64,12 @@ class CustomTableView: BaseView {
             self.tableView.reloadData()
             print("ReloadData is done.")
         }
+    }
+    
+    override func loadDataView() {
+        super.loadDataView()
+        guard let data = returnData() else { return }
+        initiateHeaderView()
     }
 }
 

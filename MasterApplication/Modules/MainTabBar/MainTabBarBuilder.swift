@@ -12,12 +12,12 @@ import UIKit
      class func build() -> UIViewController {
                  
          let mainViewController = MainViewBuilder.build()
-         let favoriteViewController = FavoriteViewBuilder.build()
+         let accountViewController = AccountViewBuilder.build()
                   
          let tabViewController = MainTabBarController()
-         tabViewController.viewControllers = [mainViewController, favoriteViewController]
+         tabViewController.viewControllers = [mainViewController, accountViewController]
          tabViewController.tabBar.backgroundColor = .systemBackground
-         tabViewController.tabBar.tintColor = .black
+         tabViewController.tabBar.tintColor = .systemBlue
          return tabViewController
      }
  }

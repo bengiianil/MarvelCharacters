@@ -16,8 +16,4 @@ enum PageViewImages: String, GenericValueProtocol {
     }
     
     case splashBackground = "splashBackground"
-    case page1 = "page1"
-    case page2 = "page2"
-    case page3 = "page3"
-    
 }

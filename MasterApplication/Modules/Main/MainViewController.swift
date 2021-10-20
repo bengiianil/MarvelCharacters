@@ -25,7 +25,7 @@ class MainViewController: BaseViewController<MainViewModel> {
     
     override func prepareViewControllerConfigurations() {
         super.prepareViewControllerConfigurations()
-        view.backgroundColor = .systemBlue
+        view.backgroundColor = .systemOrange
         addButton()
         addViewModelListeners()
     }
@@ -49,7 +49,7 @@ class MainViewController: BaseViewController<MainViewModel> {
     
     private func userLoginStateHandler(with value: Bool) {
         guard !value else { return }
-        present(LoginViewBuilder.build(), animated: true, completion: nil)
+        // present(LoginViewBuilder.build(), animated: true, completion: nil)
 
         /** same with guard statement
          if user == nil {
@@ -61,7 +61,7 @@ class MainViewController: BaseViewController<MainViewModel> {
     }
     
     @objc func buttonAction(_ sender: UIButton) {
-        print("xoxo")
+        print("Action button tapped.")
     }
 }
 

@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func initializeMainView() {
         DispatchQueue.main.async {
-            UIView.transition(with: self.window!, duration: 1, options: .transitionCrossDissolve) {
+            UIView.transition(with: self.window!, duration: 0.5, options: .transitionCrossDissolve) {
                 // As an animation, get fireMainView()
                 self.fireMainView()
             }

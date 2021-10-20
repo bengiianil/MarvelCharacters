@@ -44,7 +44,7 @@ class ActionButton: GenericBaseView<ActionButtonData> {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         // label.font = UIFont.systemFont(ofSize: 14, weight: .bold)
-        label.font = FontManager.bold(14).value
+        label.font = MainFont.regular(14).value
         label.text = ""
         label.contentMode = .center
         label.textAlignment = .center

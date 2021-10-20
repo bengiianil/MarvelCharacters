@@ -13,7 +13,8 @@ class LabelPackDistributionData {
     private(set) var numberOfLines: Int = 0
     private(set) var contentMode: UIView.ContentMode = .center
     private(set) var textAlignment: NSTextAlignment = .center
-    
+    private(set) var font: UIFont? = MainFont.regular(16).value
+
     func setLineBreakMode(by value: NSLineBreakMode) -> Self {
         lineBreakMode = value
         return self
@@ -31,6 +32,11 @@ class LabelPackDistributionData {
     
     func setTextAlignment(by value: NSTextAlignment) -> Self {
         textAlignment = value
+        return self
+    }
+    
+    func setFont(by value: UIFont?) -> Self {
+        font = value
         return self
     }
 }

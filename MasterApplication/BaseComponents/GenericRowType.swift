@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+enum GenericRowType {
+    case settings
+    case getHelp
+    case frequentlyAskedQuestions
+}

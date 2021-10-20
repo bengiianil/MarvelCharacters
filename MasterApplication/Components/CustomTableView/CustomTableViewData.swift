@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+class CustomTableViewData {
+    
+    private(set) var headerViewData: HeaderViewData
+    
+    init(headerViewData: HeaderViewData) {
+        self.headerViewData = headerViewData
+    }
+    
+}

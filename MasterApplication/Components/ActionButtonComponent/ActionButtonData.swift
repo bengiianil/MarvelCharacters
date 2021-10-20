@@ -8,8 +8,6 @@
 import Foundation
 import UIKit
 
-typealias VoidCompletionBlock = () -> Void
-
 class ActionButtonData{
     
     // private(set) dont allow set, just allow get
