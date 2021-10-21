@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+class EmailLoginViewData {
+  
+    private(set) var emailData: TextFieldViewData
+    private(set) var passwordData: TextFieldViewData
+    
+    init(emailData: TextFieldViewData, passwordData: TextFieldViewData) {
+        self.emailData = emailData
+        self.passwordData = passwordData
+    }
+}

@@ -22,7 +22,7 @@ class AccountViewModel {
     
     func getViewComponentData() {
         state?(.loading)
-        DispatchQueue.main.asyncAfter(deadline: .now()+1) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.2) { [weak self] in
             guard let self = self else { return }
             self.data = self.formatter.getAccountViewComponentData()
             self.state?(.done)
@@ -43,7 +43,7 @@ class AccountViewModel {
     
     /// data binding
     private lazy var loginActionButtonListener: VoidCompletionBlock = { [weak self] in
-        print("LoginButton tapped.")
+        print("Login button tapped")
         self?.loginActionBlock?()
     }
 }

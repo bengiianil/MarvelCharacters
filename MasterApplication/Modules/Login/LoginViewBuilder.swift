@@ -11,7 +11,8 @@ class LoginViewBuilder {
     
     class func build() -> UIViewController {
         
-        let viewModel = LoginViewModel()
+        let authenticationManager = AuthenticationManager.shared
+        let viewModel = LoginViewModel(authenticationManager: authenticationManager)
         let viewController = LoginViewController(viewModel: viewModel)
         return viewController
     }

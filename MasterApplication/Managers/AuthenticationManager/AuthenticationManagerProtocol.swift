@@ -11,4 +11,6 @@ typealias BooleanCompletionBlock = (Bool) -> Void
 protocol AuthenticationManagerProtocol {
     
     func isLoggedIn(with completion: @escaping BooleanCompletionBlock)
+    func signIn(with request: AuthenticationRequest)
+    func signOut()
 }

@@ -59,8 +59,8 @@ class CustomTableViewCell: BaseTableViewCell {
             containerView.leadingAnchor.constraint(equalTo: leadingAnchor),
             containerView.trailingAnchor.constraint(equalTo: trailingAnchor),
             
-            mainStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 10),
-            mainStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -10),
+            mainStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 30),
+            mainStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -30),
             mainStackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 10),
             mainStackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -10),
 

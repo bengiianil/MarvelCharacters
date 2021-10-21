@@ -30,6 +30,12 @@
 		361287A52720826D008A174B /* ActionButtonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361287A12720826D008A174B /* ActionButtonData.swift */; };
 		361287A62720826D008A174B /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361287A22720826D008A174B /* ActionButton.swift */; };
 		361287A72720826D008A174B /* ActionButtonTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361287A32720826D008A174B /* ActionButtonTheme.swift */; };
+		3699CE26272181CF002AA011 /* EmailLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3699CE25272181CF002AA011 /* EmailLoginView.swift */; };
+		3699CE28272181D8002AA011 /* EmailLoginViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3699CE27272181D8002AA011 /* EmailLoginViewData.swift */; };
+		3699CE2B272183A6002AA011 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3699CE2A272183A6002AA011 /* TextFieldView.swift */; };
+		3699CE2D27218411002AA011 /* TextFieldViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3699CE2C27218411002AA011 /* TextFieldViewData.swift */; };
+		3699CE3027218923002AA011 /* LoginAuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3699CE2F27218923002AA011 /* LoginAuthenticationView.swift */; };
+		3699CE322721892B002AA011 /* LoginAuthenticationViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3699CE312721892B002AA011 /* LoginAuthenticationViewData.swift */; };
 		36AF372F271C9BF500B721C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AF372E271C9BF500B721C4 /* AppDelegate.swift */; };
 		36AF3739271C9BF500B721C4 /* MasterApplication.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 36AF3737271C9BF500B721C4 /* MasterApplication.xcdatamodeld */; };
 		36AF373B271C9BF600B721C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36AF373A271C9BF600B721C4 /* Assets.xcassets */; };
@@ -120,6 +126,12 @@
 		361287A12720826D008A174B /* ActionButtonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionButtonData.swift; sourceTree = "<group>"; };
 		361287A22720826D008A174B /* ActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		361287A32720826D008A174B /* ActionButtonTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionButtonTheme.swift; sourceTree = "<group>"; };
+		3699CE25272181CF002AA011 /* EmailLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginView.swift; sourceTree = "<group>"; };
+		3699CE27272181D8002AA011 /* EmailLoginViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginViewData.swift; sourceTree = "<group>"; };
+		3699CE2A272183A6002AA011 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		3699CE2C27218411002AA011 /* TextFieldViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewData.swift; sourceTree = "<group>"; };
+		3699CE2F27218923002AA011 /* LoginAuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAuthenticationView.swift; sourceTree = "<group>"; };
+		3699CE312721892B002AA011 /* LoginAuthenticationViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAuthenticationViewData.swift; sourceTree = "<group>"; };
 		36AF372B271C9BF500B721C4 /* MasterApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasterApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36AF372E271C9BF500B721C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36AF3738271C9BF500B721C4 /* MasterApplication.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MasterApplication.xcdatamodel; sourceTree = "<group>"; };
@@ -276,6 +288,33 @@
 			path = ActionButtonComponent;
 			sourceTree = "<group>";
 		};
+		3699CE24272181BC002AA011 /* EmailLoginComponent */ = {
+			isa = PBXGroup;
+			children = (
+				3699CE25272181CF002AA011 /* EmailLoginView.swift */,
+				3699CE27272181D8002AA011 /* EmailLoginViewData.swift */,
+			);
+			path = EmailLoginComponent;
+			sourceTree = "<group>";
+		};
+		3699CE2927218390002AA011 /* TextFieldComponent */ = {
+			isa = PBXGroup;
+			children = (
+				3699CE2A272183A6002AA011 /* TextFieldView.swift */,
+				3699CE2C27218411002AA011 /* TextFieldViewData.swift */,
+			);
+			path = TextFieldComponent;
+			sourceTree = "<group>";
+		};
+		3699CE2E2721890F002AA011 /* LoginAuthenticationComponent */ = {
+			isa = PBXGroup;
+			children = (
+				3699CE2F27218923002AA011 /* LoginAuthenticationView.swift */,
+				3699CE312721892B002AA011 /* LoginAuthenticationViewData.swift */,
+			);
+			path = LoginAuthenticationComponent;
+			sourceTree = "<group>";
+		};
 		36AF3722271C9BF500B721C4 = {
 			isa = PBXGroup;
 			children = (
@@ -373,8 +412,11 @@
 			children = (
 				3612879F2720826D008A174B /* ActionButtonComponent */,
 				36128785272032E3008A174B /* CustomTableView */,
+				3699CE24272181BC002AA011 /* EmailLoginComponent */,
 				3612879A27207807008A174B /* HeaderViewComponent */,
 				3612877E2720325C008A174B /* LabelPackComponent */,
+				3699CE2E2721890F002AA011 /* LoginAuthenticationComponent */,
+				3699CE2927218390002AA011 /* TextFieldComponent */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -636,6 +678,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3699CE2D27218411002AA011 /* TextFieldViewData.swift in Sources */,
 				36AF372F271C9BF500B721C4 /* AppDelegate.swift in Sources */,
 				361287822720325C008A174B /* LabelPackDistributionData.swift in Sources */,
 				36AF3799271C9C0C00B721C4 /* PageViewImages.swift in Sources */,
@@ -643,7 +686,10 @@
 				3612878D272032E3008A174B /* CustomTableViewProtocol.swift in Sources */,
 				36AF378B271C9C0C00B721C4 /* MainFont.swift in Sources */,
 				36BE18F1271EF48B00DA4566 /* MainViewModel.swift in Sources */,
+				3699CE322721892B002AA011 /* LoginAuthenticationViewData.swift in Sources */,
+				3699CE26272181CF002AA011 /* EmailLoginView.swift in Sources */,
 				36AF3789271C9C0C00B721C4 /* SplashViewController.swift in Sources */,
+				3699CE28272181D8002AA011 /* EmailLoginViewData.swift in Sources */,
 				36BE18F5271EF49A00DA4566 /* MainViewBuilder.swift in Sources */,
 				36BE1910271F291900DA4566 /* LoginViewModel.swift in Sources */,
 				36BE18F3271EF49300DA4566 /* MainViewController.swift in Sources */,
@@ -672,6 +718,7 @@
 				3612879E27207827008A174B /* HeaderViewData.swift in Sources */,
 				36BE1909271F255B00DA4566 /* AuthenticationManagerProtocol.swift in Sources */,
 				36AF3785271C9C0C00B721C4 /* GenericDataProtocol.swift in Sources */,
+				3699CE2B272183A6002AA011 /* TextFieldView.swift in Sources */,
 				36AF3787271C9C0C00B721C4 /* BaseView.swift in Sources */,
 				3612878F272033B8008A174B /* SFSymbolsHelper.swift in Sources */,
 				3612879C2720781F008A174B /* HeaderView.swift in Sources */,
@@ -681,6 +728,7 @@
 				361287952720454C008A174B /* AccountViewDataFormatterProtocol.swift in Sources */,
 				360F56962720853100BE47FD /* UIView+Extentions.swift in Sources */,
 				36BE190E271F291000DA4566 /* LoginViewController.swift in Sources */,
+				3699CE3027218923002AA011 /* LoginAuthenticationView.swift in Sources */,
 				361287842720325C008A174B /* LabelPackComponent.swift in Sources */,
 				361287932720439D008A174B /* AccountViewDataFormatter.swift in Sources */,
 				36AF3783271C9C0C00B721C4 /* BaseViewController.swift in Sources */,

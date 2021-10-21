@@ -25,6 +25,7 @@ class CustomTableView: GenericBaseView<CustomTableViewData> {
         view.estimatedRowHeight = UITableView.automaticDimension
         view.separatorStyle = .none
         view.contentInsetAdjustmentBehavior = .never
+        /// view.contentInset = UIEdgeInsets(top: 100, left: 0, bottom: 0, right: 0)
         view.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.identifier)
         return view
     }()
