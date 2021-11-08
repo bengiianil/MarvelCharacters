@@ -30,6 +30,7 @@
 		361287A52720826D008A174B /* ActionButtonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361287A12720826D008A174B /* ActionButtonData.swift */; };
 		361287A62720826D008A174B /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361287A22720826D008A174B /* ActionButton.swift */; };
 		361287A72720826D008A174B /* ActionButtonTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361287A32720826D008A174B /* ActionButtonTheme.swift */; };
+		364A597D27396FEC00F152AF /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364A597C27396FEC00F152AF /* BaseViewModel.swift */; };
 		3699CE26272181CF002AA011 /* EmailLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3699CE25272181CF002AA011 /* EmailLoginView.swift */; };
 		3699CE28272181D8002AA011 /* EmailLoginViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3699CE27272181D8002AA011 /* EmailLoginViewData.swift */; };
 		3699CE2B272183A6002AA011 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3699CE2A272183A6002AA011 /* TextFieldView.swift */; };
@@ -126,6 +127,7 @@
 		361287A12720826D008A174B /* ActionButtonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionButtonData.swift; sourceTree = "<group>"; };
 		361287A22720826D008A174B /* ActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		361287A32720826D008A174B /* ActionButtonTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionButtonTheme.swift; sourceTree = "<group>"; };
+		364A597C27396FEC00F152AF /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		3699CE25272181CF002AA011 /* EmailLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginView.swift; sourceTree = "<group>"; };
 		3699CE27272181D8002AA011 /* EmailLoginViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginViewData.swift; sourceTree = "<group>"; };
 		3699CE2A272183A6002AA011 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
@@ -381,6 +383,7 @@
 				36AF3765271C9C0C00B721C4 /* GenericDataProtocol.swift */,
 				3612879027204084008A174B /* GenericRowType.swift */,
 				36AF3762271C9C0C00B721C4 /* GenericValueProtocol.swift */,
+				364A597C27396FEC00F152AF /* BaseViewModel.swift */,
 			);
 			path = BaseComponents;
 			sourceTree = "<group>";
@@ -679,6 +682,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3699CE2D27218411002AA011 /* TextFieldViewData.swift in Sources */,
+				364A597D27396FEC00F152AF /* BaseViewModel.swift in Sources */,
 				36AF372F271C9BF500B721C4 /* AppDelegate.swift in Sources */,
 				361287822720325C008A174B /* LabelPackDistributionData.swift in Sources */,
 				36AF3799271C9C0C00B721C4 /* PageViewImages.swift in Sources */,

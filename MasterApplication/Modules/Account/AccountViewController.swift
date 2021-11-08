@@ -20,7 +20,6 @@ class AccountViewController: BaseViewController<AccountViewModel> {
     }
     
     private func addMainComponent() {
-        
         mainComponent = CustomTableView(data: viewModel.getTableViewData())
         mainComponent.translatesAutoresizingMaskIntoConstraints = false
         mainComponent.delegate = viewModel
@@ -36,7 +35,6 @@ class AccountViewController: BaseViewController<AccountViewModel> {
     }
     
     private func subscribeViewModelPublishers() {
-        
         viewModel.subscribeViewStates { [weak self] state in
             switch state {
             case .loading:

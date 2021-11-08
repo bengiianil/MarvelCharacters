@@ -8,6 +8,7 @@
 import Foundation
 
 typealias BooleanCompletionBlock = (Bool) -> Void
+
 protocol AuthenticationManagerProtocol {
     
     func isLoggedIn(with completion: @escaping BooleanCompletionBlock)

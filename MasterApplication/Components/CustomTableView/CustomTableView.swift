@@ -93,4 +93,8 @@ extension CustomTableView: UITableViewDelegate, UITableViewDataSource {
         cell.setData(by: data)
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.selectedItem(at: indexPath.row)
+    }
 }

@@ -9,6 +9,6 @@ import Foundation
 
 protocol AccountViewDataFormatterProtocol {
     
-    func getAccountViewComponentData() -> [GenericDataProtocol]
+    func getAccountViewComponentData(by loggedIn: Bool) -> [GenericDataProtocol]
     func getAccountHeaderViewData(with completion: @escaping VoidCompletionBlock) -> HeaderViewData
 }

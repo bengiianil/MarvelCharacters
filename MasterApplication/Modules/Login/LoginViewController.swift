@@ -14,6 +14,8 @@ class LoginViewController: BaseViewController<LoginViewModel> {
     override func prepareViewControllerConfigurations() {
         super.prepareViewControllerConfigurations()
         view.backgroundColor = .gray
+        
+        subscribeViewModelListener()
         addAuthenticationView()
     }
     
@@ -28,5 +30,13 @@ class LoginViewController: BaseViewController<LoginViewModel> {
             authenticationView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             authenticationView.topAnchor.constraint(equalTo: view.topAnchor),
          ])
+    }
+    
+    private func subscribeViewModelListener() {
+        viewModel.listenLoginAction { [weak self] value in
+            if value {
+                self?.dismiss(animated: true, completion: nil)
+            }
+        }
     }
 }

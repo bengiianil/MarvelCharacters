@@ -9,24 +9,34 @@ import UIKit
 
 class AccountViewDataFormatter: AccountViewDataFormatterProtocol {
 
-    func getAccountViewComponentData() -> [GenericDataProtocol] {
+    func getAccountViewComponentData(by loggedIn: Bool) -> [GenericDataProtocol] {
+        
+        var rows = [CustomTableViewCellData]()
         
         let settings = LabelPackComponentData(title: "Settings")
             .setTitleLabelDistributionData(by: LabelPackDistributionData()
                                             .setTextAlignment(by: .left)
                                             .setContentMode(by: .center)
-                                            .setNumberOfLines(by: 1)
-                )
+                                            .setNumberOfLines(by: 1))
+        rows.append(CustomTableViewCellData(labelInfo: settings, iconInfo: SFSymbolsHelper.gearShape.value!, cellAction: .settings))
         
         let help = LabelPackComponentData(title: "Help")
             .setTitleLabelDistributionData(by: LabelPackDistributionData()
                                             .setTextAlignment(by: .left)
                                             .setContentMode(by: .center)
-                                            .setNumberOfLines(by: 1)
-                )
+                                            .setNumberOfLines(by: 1))
+        rows.append(CustomTableViewCellData(labelInfo: help, iconInfo: SFSymbolsHelper.questionMark.value!, cellAction: .getHelp))
         
-        return [CustomTableViewCellData(labelInfo: settings, iconInfo: SFSymbolsHelper.gearShape.value!, cellAction: .settings),
-                CustomTableViewCellData(labelInfo: help, iconInfo: SFSymbolsHelper.questionMark.value!, cellAction: .getHelp)]
+        if loggedIn {
+            let logout = LabelPackComponentData(title: "Logout")
+                .setTitleLabelDistributionData(by: LabelPackDistributionData()
+                                                .setTextAlignment(by: .left)
+                                                .setContentMode(by: .center)
+                                                .setNumberOfLines(by: 1))
+            rows.append(CustomTableViewCellData(labelInfo: logout, iconInfo: SFSymbolsHelper.questionMark.value!, cellAction: .logout))
+        }
+
+        return rows
     }
     
     func getAccountHeaderViewData(with completion: @escaping VoidCompletionBlock) -> HeaderViewData {

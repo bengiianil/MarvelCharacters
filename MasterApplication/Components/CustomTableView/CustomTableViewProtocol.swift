@@ -13,10 +13,9 @@ protocol CustomTableViewProtocol: AnyObject {
     func getNumberOfSection() -> Int
     func getNumberOfItem(in section: Int) -> Int
     func getData(at index: Int) -> GenericDataProtocol?
-    /// func getHeaderViewData() -> HeaderViewData?
+    func selectedItem(at index: Int)
 }
-/**
+
 extension CustomTableViewProtocol {
-    func getHeaderViewData() -> HeaderViewData? { return nil }
+    func selectedItem(at index: Int) { }
 }
-*/

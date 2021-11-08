@@ -9,6 +9,8 @@ import Foundation
 
 class LoginViewModel {
     
+    private var loginViewBlock: BooleanCompletionBlock?
+    
     private var authenticationManager: AuthenticationManagerProtocol
     init(authenticationManager: AuthenticationManagerProtocol) {
         self.authenticationManager = authenticationManager
@@ -18,8 +20,13 @@ class LoginViewModel {
         return LoginAuthenticationViewData(emailLoginViewData: EmailLoginViewData(emailData: TextFieldViewData(placeHolder: "E-mail"), passwordData: TextFieldViewData(placeHolder: "Password")), loginButtonData: ActionButtonData(buttonText: "Sign In", buttonType:.filled(ActionButtonTheme.loginAction)).setActionButtonListener(by: signInActionButtonListener), signOutButtonData: ActionButtonData(buttonText: "Sign Out", buttonType:.outlined(ActionButtonTheme.bright)).setActionButtonListener(by: signOutActionButtonListener))
     }
     
+    func listenLoginAction(with completion: @escaping BooleanCompletionBlock) {
+        loginViewBlock = completion
+    }
+    
     private func fireSignIn() {
         authenticationManager.signIn(with: AuthenticationRequest(email: "bengiianil@hotmail.com", password: "123123"))
+        loginViewBlock?(true)
     }
     
     private func fireSignOut() {
