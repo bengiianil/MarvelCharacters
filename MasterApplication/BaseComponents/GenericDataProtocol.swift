@@ -7,6 +7,8 @@
 
 import Foundation
 
-protocol GenericDataProtocol {
-    var type: GenericRowType { get }
+public protocol GenericDataProtocol {
+    
+    var type: GenericRowType? { get }
+    
 }

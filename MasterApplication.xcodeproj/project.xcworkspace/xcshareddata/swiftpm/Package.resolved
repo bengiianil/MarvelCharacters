@@ -21,10 +21,10 @@
       },
       {
         "package": "DefaultNetworkOperationPackage",
-        "repositoryURL": "https://github.com/erkutbas/DefaultNetworkOperationPackage",
+        "repositoryURL": "https://github.com/Hepsiburada-mobil-iOS-Bootcamp/DefaultNetworkOperationPackage",
         "state": {
           "branch": "main",
-          "revision": "648dbc90e016270be09c38e9d3e9442c336f29be",
+          "revision": "3d53e6e3fcbc33862422be43e40d2b684acadc16",
           "version": null
         }
       },
@@ -89,6 +89,15 @@
           "branch": null,
           "revision": "0706abcc6b0bd9cedfbb015ba840e4a780b5159b",
           "version": "1.22.2"
+        }
+      },
+      {
+        "package": "Lottie",
+        "repositoryURL": "https://github.com/airbnb/lottie-ios",
+        "state": {
+          "branch": "master",
+          "revision": "e9c52fa3e2f962febb6fcc27a94eff15292130b2",
+          "version": null
         }
       },
       {

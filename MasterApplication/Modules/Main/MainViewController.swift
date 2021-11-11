@@ -8,60 +8,61 @@
 import Foundation
 import UIKit
 
-fileprivate extension Selector {
-    static var buttonTapped = #selector(MainViewController.buttonAction)
-}
-
 class MainViewController: BaseViewController<MainViewModel> {
     
-    private lazy var button: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: .buttonTapped, for: .touchUpInside)
-        button.setTitle("PUSH", for: .normal)
-        button.tintColor = .white
-        return button
-    }()
+    private var mainComponent: ItemCollectionView!
     
     override func prepareViewControllerConfigurations() {
         super.prepareViewControllerConfigurations()
         view.backgroundColor = .systemOrange
-        addButton()
+        addMainComponent()
         addViewModelListeners()
     }
     
-    private func addButton() {
-        view.addSubview(button)
+    private func addMainComponent() {
+        mainComponent = ItemCollectionView()
+        mainComponent.translatesAutoresizingMaskIntoConstraints = false
+        mainComponent.delegate = viewModel
+
+        view.addSubview(mainComponent)
+        
         NSLayoutConstraint.activate([
-            button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            button.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            mainComponent.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            mainComponent.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            mainComponent.topAnchor.constraint(equalTo: view.topAnchor),
+            mainComponent.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
     }
+ 
     private func addViewModelListeners() {
-        // start to listen viewModel
-        viewModel.subscribeLoginStates { [weak self] state in
-            
-            // take action according to the listened viewModel, call userLoginStateHandler()
-            self?.userLoginStateHandler(with: state)
+        viewModel.subscribeViewState { [weak self] state in
+            switch state {
+            case .loading:
+                return
+            case .done:
+                self?.mainComponent.reloadCollectionView()
+            default:
+                break
+            }
+        }
+        
+        viewModel.subscribeDetailViewState { [weak self] data in
+            self?.fireDetailView(with: data)
+        }
+    }
+    
+    private func fireDetailView(with data: ItemDetailViewRequest) {
+        
+        let viewController = ItemDetailViewBuilder.build(with: data)
+        
+        switch data.type {
+        case .push:
+            navigationController?.pushViewController(viewController, animated: true)
+        case .present:
+            present(viewController, animated: true, completion: nil)
         }
         
     }
     
-    private func userLoginStateHandler(with value: Bool) {
-        guard !value else { return }
-        // present(LoginViewBuilder.build(), animated: true, completion: nil)
-
-        /** same with guard statement
-         if user == nil {
-             // user logged out
-         } else {
-             // user logged in
-         }
-         */
-    }
-    
-    @objc func buttonAction(_ sender: UIButton) {
-        print("Action button tapped.")
-    }
 }
 
